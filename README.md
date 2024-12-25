@@ -11,6 +11,33 @@ This project is a practice implementation of an e-commerce application using Spr
 - **Database Integration**: Uses H2 in-memory database for persistent storage.
 - **Development Tools**: Includes Spring Boot DevTools for hot swapping during development.
 
+## Microservices
+This project is composed of several microservices, each responsible for a specific domain of the application:
+
+1. **User Service**
+   - Manages user information and authentication.
+   - Exposes RESTful APIs for user operations.
+   - Uses Spring Data JPA for database interactions.
+
+2. **Product Service**
+   - Manages product catalog, including product details and inventory.
+   - Exposes RESTful APIs for product operations.
+   - Uses Spring Data JPA for database interactions.
+
+3. **Order Service**
+   - Handles order processing, including order creation and tracking.
+   - Exposes RESTful APIs for order operations.
+   - Uses Spring Data JPA for database interactions.
+
+4. **API Gateway**
+   - Acts as a single entry point for all client requests.
+   - Routes requests to the appropriate microservices.
+   - Uses Spring Cloud Gateway.
+
+5. **Service Discovery**
+   - Uses Eureka for service registration and discovery.
+   - Ensures that microservices can find and communicate with each other.
+
 ## Technologies Used
 
 ### Backend
@@ -19,6 +46,8 @@ This project is a practice implementation of an e-commerce application using Spr
 - **Spring Web**: Framework for building web applications, including RESTful services.
 - **H2 Database**: In-memory database for development and testing.
 - **Lombok**: Java library that automatically plugs into your editor and build tools, simplifying Java development.
+- **Spring Cloud Gateway**: Provides a library for building an API Gateway on top of Spring WebFlux.
+- **Spring Cloud Netflix Eureka**: Service registry for service discovery.
 
 ## Prerequisites
 - Java 21
@@ -66,4 +95,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Spring Web
 - H2 Database
 - Lombok
-
+- Spring Cloud Gateway
+- Spring Cloud Netflix Eureka
